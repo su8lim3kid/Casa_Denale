@@ -63,7 +63,7 @@ const Navbar  = () =>
         <div style={{
           display: 'flex',
           justifyContent: 'center',
-          width: '50%',
+          width: '100%',
           
         }}>
       </div>
