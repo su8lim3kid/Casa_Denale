@@ -114,6 +114,9 @@ class Home extends React.Component {
 </Card>
 </CardDeck>
 
+<br />
+<br />
+
 
 
   {/* <Card style={{ width: '18rem' }}>

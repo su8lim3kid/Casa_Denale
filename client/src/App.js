@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
 import About from './components/About';
 import NoMatch from './components/NoMatch';
+import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import Booking from './components/Booking';
 import Contact from './components/Contact';
@@ -27,6 +28,8 @@ const App = () => (
        <Route component={NoMatch} />
      </Switch>
    </Container>
+   <Footer />
+
  </>
 );
 
