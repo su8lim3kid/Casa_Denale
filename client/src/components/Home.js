@@ -1,17 +1,19 @@
 import React  from 'react'
 import { Accordion, Container, Icon } from 'semantic-ui-react'
+import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
 import styled from 'styled-components'
 import tulum from './../images/tulum.jpg'
+import tulum2 from './../images/tulum2.jpg'
 import king from './../images/king.png'
 import dq from './../images/DQ.png'
 import villa from './../images/villa.png'
+import fp1 from './../images/FP1.jpg'
+import fp2 from './../images/FP2.jpg'
 import '../stylesheet/home.css'
-
-
-
+import { NavLink, } from "react-router-dom"
 
 class Home extends React.Component {
 
@@ -35,11 +37,13 @@ class Home extends React.Component {
       <Header>
         Welcome to Casa Denale
       </Header>
+      <NavLink to='/booking'>
   <BookButton> 
   <Button variant="warning" size="lg">
       Book Now
     </Button>{' '}
     </BookButton>
+    </NavLink>
     <br/>
     <br/>
     <br/>
@@ -47,7 +51,7 @@ class Home extends React.Component {
       <Container>
         
           <p style={{fontSize: '18px'}}>
-          With only 6 Rooms, Casa Santiago is an intimate 4 star jewel, furnished with care and elegance. Our guests can totally relax under the Palapa or Poolside and enjoy the peace and tranquility that this beautiful place offers.
+          With only 6 Rooms, Casa Denale is an intimate 4 star jewel, furnished with care and elegance. Our guests can totally relax under the Palapa or Poolside and enjoy the peace and tranquility that this beautiful place offers.
       Casa Santiago is located in Tulum in the residential neighborhood of La Veleta, a serene and peaceful area surrounded by nature. Casa Santiago is only 1.5 Km from Tulum´s centre and 5.5 Km from the beach.  The Tulum Parque Nacional is 3.8 Km from the property. Holistika Park is just 200 mt away. Here the guests can practice yoga, meditation, it’s an oasis of relax and nature, with a lot of routes, natural pool and temazcal (typical Maya’s sauna with sacred rite).
       
           </p>
@@ -89,7 +93,9 @@ class Home extends React.Component {
     <Card.Text>
       Audentes fortuna iuvat.
     </Card.Text>
-    <Button variant="primary">Room Details</Button>
+    <NavLink to='/rooms'>
+    <Button variant="primary" >Room Details</Button>
+    </NavLink>
   </Card.Body>
 </Card>
 <Card style={{ width: '18rem' }}>
@@ -99,7 +105,9 @@ class Home extends React.Component {
     <Card.Text>
       Audentes fortuna iuvat.
     </Card.Text>
-    <Button variant="primary">Room Details</Button>
+    <NavLink to='/rooms'>
+    <Button variant="primary" >Room Details</Button>
+    </NavLink>
   </Card.Body>
 </Card>
 <Card style={{ width: '18rem' }}>
@@ -109,13 +117,52 @@ class Home extends React.Component {
     <Card.Text>
       Audentes fortuna iuvat.
     </Card.Text>
-    <Button variant="primary">Room Details</Button>
+    <NavLink to='/rooms'>
+    <Button variant="primary" >Room Details</Button>
+    </NavLink>
   </Card.Body>
 </Card>
 </CardDeck>
 
 <br />
 <br />
+<Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={fp1}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={tulum2}
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={fp2}
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
 
 
 
@@ -166,8 +213,5 @@ class Home extends React.Component {
   transform: translate(-50%, -50%);
   
  `
-
-
-
 
 export default Home

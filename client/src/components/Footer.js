@@ -30,7 +30,7 @@ class Footer extends React.Component {
                 color: "white" 
               }}>
               219 Rockledge St.
-Hattiesburg, MS 39401 / 720-321-1234 /
+              Hattiesburg, MS 39401 / 720-321-1234 /
               contact@CasaDenale.com
             </h5>
           </div>
@@ -50,7 +50,7 @@ Hattiesburg, MS 39401 / 720-321-1234 /
                 margin: '5px 25px 5px 5px'
               }}>
 
-              <h5> &copy; 2020 Casa Denale llc. 
+              <h5> &copy; 2020 Casa Denale Hotel LLC. 
                   {" "}
                   <NavLink
             exact

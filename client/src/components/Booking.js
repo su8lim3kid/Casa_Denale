@@ -3,7 +3,7 @@ import React from 'react'
 function Booking() {
   return (
     <div>
-      Booking
+     <p style = {{fontSize:'40px'}}> Booking Page Soon</p>
     </div>
   )
 }

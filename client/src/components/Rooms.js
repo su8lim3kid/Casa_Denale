@@ -3,7 +3,7 @@ import React from 'react'
 function Rooms() {
   return (
     <div>
-      Our Rooms
+      <p style = {{fontSize:'40px'}}> Our Rooms Page Coming Soon</p>
     </div>
   )
 }

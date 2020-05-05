@@ -3,7 +3,7 @@ import React from 'react'
 function Gallery() {
   return (
     <div>
-      Gallery
+     <p style = {{fontSize:'40px'}}> Gallery Page Soon</p>
     </div>
   )
 }

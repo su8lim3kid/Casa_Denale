@@ -3,7 +3,8 @@ import React from 'react'
 function Contact() {
   return (
     <div>
-      Contact Us
+            <p style = {{fontSize:'40px'}}> Contact Page Coming Soon</p>
+
     </div>
   )
 }

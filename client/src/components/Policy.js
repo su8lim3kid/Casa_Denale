@@ -3,7 +3,7 @@ import React from 'react'
 function Policy() {
   return (
     <div>
-      Our Policy
+      <p style = {{fontSize:'40px'}}> Policy Page Coming Soon</p>
     </div>
   )
 }
