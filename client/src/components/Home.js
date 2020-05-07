@@ -14,6 +14,9 @@ import fp1 from './../images/FP1.jpg'
 import fp2 from './../images/FP2.jpg'
 import '../stylesheet/home.css'
 import { NavLink, } from "react-router-dom"
+import Typist from 'react-typist';
+
+
 
 class Home extends React.Component {
 
@@ -30,13 +33,17 @@ class Home extends React.Component {
     const { activeIndex } = this.state
     return (
       <>
+      <div>
+      </div>
       
     <style>{'body { background-color: #fcf6e6; }'}</style>
            
       <HImg src={tulum} alt='Tulum' /> 
+      <Typist>
       <Header>
         Welcome to Casa Denale
       </Header>
+      </Typist>
       <NavLink to='/booking'>
   <BookButton> 
   <Button variant="warning" size="lg">
