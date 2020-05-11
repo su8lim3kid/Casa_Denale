@@ -14,13 +14,17 @@ import fp1 from './../images/FP1.jpg'
 import fp2 from './../images/FP2.jpg'
 import '../stylesheet/home.css'
 import { NavLink, } from "react-router-dom"
-import Typist from 'react-typist';
+import Typist from 'react-typist'
+import LazyLoad from 'react-lazyload';
+
 
 
 
 class Home extends React.Component {
 
-  state = { activeIndex: 0 }
+  state = {
+     activeIndex: 0
+     }
 
   handleClick = (e, titleProps) => {
     const { index } = titleProps
@@ -35,15 +39,16 @@ class Home extends React.Component {
       <>
       <div>
       </div>
-      
     <style>{'body { background-color: #fcf6e6; }'}</style>
-           
+
+      <LazyLoad>
       <HImg src={tulum} alt='Tulum' /> 
       <Typist>
       <Header>
         Welcome to Casa Denale
       </Header>
       </Typist>
+    </LazyLoad>
       <NavLink to='/booking'>
   <BookButton> 
   <Button variant="warning" size="lg">
@@ -139,6 +144,8 @@ class Home extends React.Component {
       className="d-block w-100"
       src={fp1}
       alt="First slide"
+      height='400px'
+    
     />
     <Carousel.Caption>
       <h3>First slide label</h3>
@@ -150,6 +157,7 @@ class Home extends React.Component {
       className="d-block w-100"
       src={tulum2}
       alt="Third slide"
+      height='400px'
     />
 
     <Carousel.Caption>
@@ -162,6 +170,7 @@ class Home extends React.Component {
       className="d-block w-100"
       src={fp2}
       alt="Third slide"
+      height='400px'
     />
 
     <Carousel.Caption>
@@ -171,18 +180,6 @@ class Home extends React.Component {
   </Carousel.Item>
 </Carousel>
 
-
-
-  {/* <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src= {king} />
-  <Card.Body>
-    <Card.Title>SUITE KING</Card.Title>
-    <Card.Text>
-      Audentes fortuna iuvat.
-    </Card.Text>
-    <Button variant="primary">Room Details</Button>
-  </Card.Body>
-</Card> */}
 
 
 
@@ -210,6 +207,7 @@ class Home extends React.Component {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+
 
   `
  const BookButton = styled.div `
