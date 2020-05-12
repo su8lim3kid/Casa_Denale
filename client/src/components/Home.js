@@ -1,5 +1,5 @@
-import React  from 'react'
-import { Accordion, Container, Icon } from 'semantic-ui-react'
+import React, { useState, useEffect } from 'react'
+import { Accordion, Container,  } from 'semantic-ui-react'
 import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
@@ -20,21 +20,14 @@ import LazyLoad from 'react-lazyload';
 
 
 
-class Home extends React.Component {
+function Home(props) {
 
-  state = {
-     activeIndex: 0
-     }
+  const [expanded, setExpanded] = useState(props.expanded)
 
-  handleClick = (e, titleProps) => {
-    const { index } = titleProps
-    const { activeIndex } = this.state
-    const newIndex = activeIndex === index ? -1 : index
+  useEffect(() => {
+    setExpanded(props.expanded);
+  }, [props.expanded]);
 
-    this.setState({ activeIndex: newIndex })
-  }
-  render() {
-    const { activeIndex } = this.state
     return (
       <>
       <div>
@@ -72,15 +65,13 @@ class Home extends React.Component {
        
         
 
-        <Accordion.Title
-          active={activeIndex === 1}
-          index={1}
-          onClick={this.handleClick}
-        >
-          <Icon name='dropdown' />
-          Read More
+      <Accordion.Title
+        onClick={() => {
+          setExpanded(!expanded);
+        }}>
+         <p>{expanded ? "- Read Less" : "+ Read More"}</p>
         </Accordion.Title>
-        <Accordion.Content active={activeIndex === 1}>
+        <Accordion.Content active={expanded}>
           <p style={{fontSize: '18px'}}>
           Overlooking the sun Terrace and Pool, each Room of Casa Santiago is furnished with a local wood, a king size bed and a single sofa bed, an outdoor Patio with table and chairs. High quality bed linen imported from Italy, a laptop safe, LED TV, Fan and inverter air-conditioning.
       Bathroom with rainfall shower, hair dryer and amenities. We offer a daily cleaning service.
@@ -186,7 +177,7 @@ class Home extends React.Component {
   </>
     )
   }
-}
+
  const Header = styled.div`
   position: absolute;
   left: 0;
